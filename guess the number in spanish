@@ -1,0 +1,28 @@
+
+
+import random 
+
+np = str(input("Bienvenido a El juego una IA pensara en un numero entero entre 1 y 10 y tu tendras que adivinar el numero, tienes tres intentos buena suerte \nIngresa tu nombre de usuario -> "))
+
+print(f"Bienvenido {np} inserta un numero \n")
+
+i1 = int(input("-> "))
+
+ai = random.randint(1, 10)
+
+if i1 == ai:  
+    print(f" \n Felicidades {np} has ganado con un intento Pulsa enter para Volver a jugar \n")
+
+elif i1 != ai:  
+   i2 = int(input(f"Ese no es el numero  {np} perdiste una vida te quedan 2, intentadolo de nuevo -> "))
+   if i2 == ai: 
+    print(f" \n Felicidades {np}  has ganado con dos intentos Pulsa enter para Volver a jugar \n")
+   if i2 != ai:
+        i3 = int(input(f"Ese no es el numero {np}  perdiste una vida te queda 1 vida, intentadolo de nuevo -> "))
+   if i3 == ai:
+        print(f" \n Felicidades {np} has ganado con tres intentos Pulsa enter para Volver a jugar \n")
+   if i3 != ai: 
+      print(f"Has perdido humillantemente, el numero obviamente es {ai} me decepcionas, ni siquiera dire tu nombre, por favor no vuelvas a jugar")
+
+else:
+    print ("Ha surgido un error ")
